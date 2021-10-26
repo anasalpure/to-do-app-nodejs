@@ -82,3 +82,20 @@ exports.delete = async (req,res,next)=>{
     }); 
  
 }
+
+exports.index = async (req,res,next)=>{
+
+    const authUserId = req.user.id;
+     
+    knex('todos')
+    .where('user_id' , authUserId)
+    .then((todos)=>{
+        if (todos) {
+             return res.status(200).json(todos); 
+        }
+        return res.status(200).json({});
+    })
+    .catch(err=>{
+        return res.status(500).json();
+    }); 
+}

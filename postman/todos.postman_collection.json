@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "f76afe7f-c136-431d-aca9-9d4da40b4c54",
+		"name": "Bots",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuYXMuYWxwdXJlQGdtYWlsLmNvbSIsImlkIjoxLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNjI5MjMzOTA5LCJleHAiOjE2Mjk4Mzg3MDl9.SrcMRx2GCGi-EUca1YeLqGWDjNwnKSNZzsYmJByxwVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"fff\",\r\n    \"connection_id\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/bots/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"bots",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index all items",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuYXMuYWxwdXJlQGdtYWlsLmNvbSIsImlkIjoxLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNjI5MjMzOTA5LCJleHAiOjE2Mjk4Mzg3MDl9.SrcMRx2GCGi-EUca1YeLqGWDjNwnKSNZzsYmJByxwVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/bots/index",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"bots",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuYXMuYWxwdXJlQGdtYWlsLmNvbSIsImlkIjoxLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNjI5MjMzOTA5LCJleHAiOjE2Mjk4Mzg3MDl9.SrcMRx2GCGi-EUca1YeLqGWDjNwnKSNZzsYmJByxwVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/bots/show/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"bots",
+						"show",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update bot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuYXMuYWxwdXJlQGdtYWlsLmNvbSIsImlkIjoxLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNjI5MjMzOTA5LCJleHAiOjE2Mjk4Mzg3MDl9.SrcMRx2GCGi-EUca1YeLqGWDjNwnKSNZzsYmJByxwVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"is_auto_pilot\":\"true\",\r\n    \"is_fake_order\":\"true\",\r\n    \"target_amount\":200,\r\n    \"frequency\":\"1m\",\r\n    \"direction\":\"buy\",\r\n    \"from\":\"USDT\",\r\n    \"to\":\"BTC\",\r\n    \"is_active\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/bots/update/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"bots",
+						"update",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete bot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuYXMuYWxwdXJlQGdtYWlsLmNvbSIsImlkIjoxLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNjI5MjMzOTA5LCJleHAiOjE2Mjk4Mzg3MDl9.SrcMRx2GCGi-EUca1YeLqGWDjNwnKSNZzsYmJByxwVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/bots/delete/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"bots",
+						"delete",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
